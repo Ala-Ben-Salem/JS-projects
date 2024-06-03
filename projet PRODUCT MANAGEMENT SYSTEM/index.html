@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>projet CRUD</title>
+</head>
+<body>
+ <div class="crud">
+    <!-- head  -->
+    <div class="head">
+      <h2>cruds</h2>
+      <p>product management system</p>
+    </div>
+    <!-- inputs -->
+    <div class="inputs">
+     <input type="text" placeholder="title" id="title" required>
+        <div class="price">
+            <input onkeyup="getTotal()" type="number" placeholder="price" id="price" required>
+            <input onkeyup="getTotal()" type="number" placeholder="taxes" id="taxes" required>
+            <input onkeyup="getTotal()" type="number" placeholder="ads" id="ads" required>
+            <input onkeyup="getTotal()" type="number" placeholder="discount" id="discount" >
+            <small id="total"></small>
+        </div>
+        <input type="number" placeholder="count" id="count" required>
+        <input type="text" placeholder="category" id="category" required>
+        <button id="submit">Create</button>
+    </div>
+    <!-- outputs  -->
+    <div class="outputs">
+      <div class="searchBlock">
+        <input onkeyup="searchdata(this.value)" type="text" id="search" placeholder="Search">
+        <div class="btnSearch">
+            <button onclick="getsearchmood(this.id)" id="searchTitle">Search By Title</button>
+            <button onclick="getsearchmood(this.id)" id="searchCategory">Search By category</button>
+
+        </div>
+      </div>
+       <!-- button delete all-->
+       <div id="deleteall">
+
+       </div>
+      <table>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Taxes</th>
+            <th>Ads</th>
+            <th>Discount</th>
+            <th>Total</th>
+            <th>Category</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+        <tbody id="tbody">
+           <!-- 
+            <tr>
+                <td>3</td>
+                <td>sumsung</td>
+                <td>2000</td>
+                <td>100</td>
+                <td>100</td>
+                <td>100</td>
+                <td>120</td>
+                <td>phone</td>
+                <td><button id="update">Update</button></td>
+                <td><button id="Delete">Delete</button></td>
+            </tr>-->
+        </tbody>
+      </table>
+
+    </div>
+
+   </div>
+   <button id="btntop">TOP <i class="fa-solid fa-arrow-up"></i> </button>
+    <script src="script.js"></script>
+</body>
+</html>
